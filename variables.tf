@@ -32,3 +32,9 @@ variable "project" {
   type        = string
   default     = "eks-dev-test"
 }
+
+variable "cluster_suffix" {
+  description = "Short suffix appended to the cluster name to disambiguate parallel deployments (e.g. 'cli', 'vcs')"
+  type        = string
+  default     = ""
+}
