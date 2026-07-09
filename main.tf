@@ -55,7 +55,7 @@ module "eks_cluster" {
   project     = var.project
 
   # Cluster
-  cluster_name       = var.cluster_suffix != "" ? "${var.project}-${var.environment}-${var.cluster_suffix}" : "${var.project}-${var.environment}"
+  cluster_name       = "${var.project}-${var.environment}"
   kubernetes_version = "1.33"
 
   # Public endpoint enabled so HCP Terraform remote runner can reach the API server.
